@@ -1,0 +1,31 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 300px;
+}
+
+.square {
+  height: 100px;
+  font-size: 2em;
+  background: #fff;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.status {
+  font-size: 1.2em;
+  font-weight: bold;
+} 
