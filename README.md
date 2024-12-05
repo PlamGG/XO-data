@@ -12,7 +12,7 @@
 
 1. **Clone โปรเจค:**
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/PlamGG/XO-data.git>
    cd xo-game
    ```
 
