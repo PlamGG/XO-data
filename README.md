@@ -44,32 +44,6 @@
    ```
    Frontend จะทำงานที่ port 5173
 
-### โครงสร้างโปรเจค
-xo-game/
-├── client/
-│ ├── src/
-│ │ ├── components/
-│ │ │ ├── common/
-│ │ │ │ ├── LoadingSpinner.jsx
-│ │ │ │ ├── Toast.jsx
-│ │ │ │ └── ConfirmDialog.jsx
-│ │ │ ├── game/
-│ │ │ │ ├── Board.jsx
-│ │ │ │ └── Game.jsx
-│ │ ├── pages/
-│ │ │ ├── Home.jsx
-│ │ │ ├── History.jsx
-│ │ │ └── Replay.jsx
-│ │ └── utils/
-│ │ ├── gameLogic.js
-│ │ └── aiLogic.js
-│ └── package.json
-├── server/
-│ ├── server.js
-│ └── package.json
-└── README.md
-
-
 
 ### ฟีเจอร์หลัก
 
