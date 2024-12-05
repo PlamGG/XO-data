@@ -1,51 +1,60 @@
-XO Game Project
-โปรเจค XO Game ถูกพัฒนาด้วย React และ Node.js รองรับการเล่นหลายขนาดบอร์ด พร้อมโหมดเล่นกับเพื่อนหรือ AI อีกทั้งยังสามารถบันทึกและดูย้อนหลังการเล่นได้!
+# XO Game Project
 
-ความต้องการของระบบ
-Node.js: เวอร์ชัน 14.0.0 หรือสูงกว่า
-npm: เวอร์ชัน 6.0.0 หรือสูงกว่า
-SQLite3: สำหรับจัดการฐานข้อมูล
-การติดตั้ง (Setup)
-1. Clone โปรเจค
-bash
-คัดลอกโค้ด
-git clone https://github.com/PlamGG/XO-data.git
-cd xo-game
-2. ติดตั้ง Dependencies
-Frontend:
+โปรเจค XO Game ที่พัฒนาด้วย React และ Node.js โดยรองรับการเล่นได้หลายขนาดบอร์ด มีโหมดเล่นกับเพื่อนและเล่นกับ AI
 
-bash
-คัดลอกโค้ด
-cd client
-npm install
-Backend:
+## ความต้องการของระบบ
 
-bash
-คัดลอกโค้ด
-cd server
-npm install
-การรัน (Run)
-1. รัน Backend Server
-bash
-คัดลอกโค้ด
-cd server
-npm start
-Server จะทำงานที่ port 3000
-2. รัน Frontend Development Server
-bash
-คัดลอกโค้ด
-cd client
-npm run dev
-Frontend จะทำงานที่ port 5173
-ฟีเจอร์หลัก
-เลือกขนาดบอร์ด: ตั้งแต่ 3x3 จนถึง 10x10
-โหมดการเล่น: เล่นกับเพื่อนหรือ AI
-ระบบบันทึกประวัติ: เก็บข้อมูลการเล่นทั้งหมด
-ดูย้อนหลัง: เรียกดู Replay การเล่นได้
-อัลกอริทึมสำคัญ
-1. การตรวจสอบผู้ชนะ
-javascript
-คัดลอกโค้ด
+- Node.js (v14.0.0 หรือสูงกว่า)
+- npm (v6.0.0 หรือสูงกว่า)
+- SQLite3
+
+## การติดตั้ง (Setup)
+
+1. **Clone โปรเจค:**
+   ```bash
+   git clone <https://github.com/PlamGG/XO-data.git>
+   cd xo-game
+   ```
+
+2. **ติดตั้ง Dependencies สำหรับ Frontend:**
+   ```bash
+   cd client
+   npm install
+   ```
+
+3. **ติดตั้ง Dependencies สำหรับ Backend:**
+   ```bash
+   cd server
+   npm install
+   ```
+
+## การรัน (Run)
+
+1. **รัน Backend Server:**
+   ```bash
+   cd server
+   npm start
+   ```
+   Server จะทำงานที่ port 3000
+
+2. **รัน Frontend Development Server:**
+   ```bash
+   cd client
+   npm run dev
+   ```
+   Frontend จะทำงานที่ port 5173
+
+### ฟีเจอร์หลัก
+
+1. เลือกขนาดบอร์ด (3x3 ถึง 10x10)
+2. โหมดเล่นกับเพื่อนและ AI
+3. บันทึกประวัติการเล่น
+4. ดูย้อนหลังการเล่น
+
+## อัลกอริทึม (Algorithms)
+
+### 1. การตรวจสอบผู้ชนะ
+
 function calculateWinner(squares, size) {
   // ตรวจสอบแนวนอน
   for (let i = 0; i < size; i++) {
@@ -79,9 +88,9 @@ function calculateWinner(squares, size) {
   
   return null;
 }
-2. AI Logic (Minimax Algorithm)
-javascript
-คัดลอกโค้ด
+
+
+### 2. AI Logic (Minimax สำหรับ 3x3)
 function minimax(board, depth, isMaximizing) {
   const winner = calculateWinner(board, 3);
   if (winner === 'X') return 10 - depth;
@@ -112,9 +121,10 @@ function minimax(board, depth, isMaximizing) {
     return bestScore;
   }
 }
-โครงสร้างฐานข้อมูล
-sql
-คัดลอกโค้ด
+
+
+## โครงสร้างฐานข้อมูล
+
 CREATE TABLE games (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   date TEXT NOT NULL,
@@ -125,10 +135,9 @@ CREATE TABLE games (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+## API Endpoints
 
-
-API Endpoints
-GET /api/games - ดึงประวัติการเล่นทั้งหมด
-GET /api/games/:id - ดึงข้อมูลเกมตาม ID
-POST /api/games - บันทึกเกมใหม่
-DELETE /api/games/:id - ลบข้อมูลเกม
+- `GET /api/games` - ดึงประวัติการเล่นทั้งหมด
+- `GET /api/games/:id` - ดึงข้อมูลเกมตาม ID
+- `POST /api/games` - บันทึกเกมใหม่
+- `DELETE /api/games/:id` - ลบข้อมูลเกม
