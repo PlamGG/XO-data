@@ -154,6 +154,9 @@ https://xo-gameai.netlify.app/
 ![image](https://github.com/user-attachments/assets/18f77571-f430-4523-bf2f-120168573dfd)
 
 
+ปัญหาเล็กน้อยที่ Netlify  ทำให้ไม่สามารถดูบันทึกได้แต่หาก run บนเครืองสามารถดูบันทึกการเล่นได้
+
+
 
 
 
