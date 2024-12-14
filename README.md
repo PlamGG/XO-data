@@ -141,3 +141,20 @@ CREATE TABLE games (
 - `GET /api/games/:id` - ดึงข้อมูลเกมตาม ID
 - `POST /api/games` - บันทึกเกมใหม่
 - `DELETE /api/games/:id` - ลบข้อมูลเกม
+
+
+LIVE 
+https://xo-gameai.netlify.app/
+
+![image](https://github.com/user-attachments/assets/b9bcb167-d678-4541-a629-4adb373d0374)
+
+
+
+
+![image](https://github.com/user-attachments/assets/18f77571-f430-4523-bf2f-120168573dfd)
+
+
+
+
+
+
